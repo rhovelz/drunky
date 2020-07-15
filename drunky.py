@@ -23,9 +23,9 @@ extensions = ',php,html,txt,md,sh,py'
 helptext = ("""
 Drunky: Auto recon ~
 
-Flags: 
+Flags:
 
-    -h, --help\t\t\tShows this help
+    -h, --help\t\t\tShow help
     -t, --target IP\t\tTarget ip address
     -o, --output DIR\t\tOutput directory, defaults to "drunky"
 
@@ -75,7 +75,7 @@ def host_up(recursive_level=0):
         time.sleep(3)
         return host_up(recursive_level+1)
     return result
-    
+
 def parse_arugments():
     global target, verbosity, no_ping, depth, wordlist
     try:
@@ -146,7 +146,7 @@ def main():
 
         if show_banner:
             print(base64.b64decode("ICAgX19fX19fICAgICAgICAgICAgICAgIF9fICAgIF8gICAgICAgICAgCiAgLyBfX19fL19fXyAgX19fX19fX19fXy8gL18gIChfKV9fXyAgX19fIAogLyAvICAgLyBfXyBcLyBfX18vIF9fXy8gX18gXC8gLyBfXyBcLyBfIFwKLyAvX19fLyAvXy8gLyAvICAoX18gICkgLyAvIC8gLyAvIC8gLyAgX18vClxfX19fL1xfX19fL18vICAvX19fXy9fLyAvXy9fL18vIC9fL1xfX18vIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgIF9fX18gICAgICAgICAgICAgICAgICAgX18gICAgICAgICAgICAgICAgICAgICAgCiAgIC8gX18gXF9fX19fX18gIF9fX19fXyAgLyAvX19fXyAgX18gIF9fX18gIF9fICBfXwogIC8gLyAvIC8gX19fLyAvIC8gLyBfXyBcLyAvL18vIC8gLyAvIC8gX18gXC8gLyAvIC8KIC8gL18vIC8gLyAgLyAvXy8gLyAvIC8gLyAsPCAvIC9fLyAvIC8gL18vIC8gL18vIC8gCi9fX19fXy9fLyAgIFxfXyxfL18vIC9fL18vfF98XF9fLCAoXykgLl9fXy9cX18sIC8gIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgL19fX18vIC9fLyAgICAvX19fXy8gICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEJldGEgUmVsZWFzZXMhCgo=").decode("utf-8"))
-        
+
 
 
         vprint(0, "drunky", "Checking whether host is alive...")
@@ -155,15 +155,15 @@ def main():
             return
 
         vprint(0, "drunky", "Starting initial scan...")
-        
+
         create_result_dir()
         quickscan = run_simple_cmd("nmap -Pn -sS -p- -T5 --min-rate 2500 --max-retries 3 -oN %s/nmap-quickscan.nmap -oX %s/nmap-quickscan.xml %s" % (output_dir, output_dir, target))
-        
+
         vprint(0, "drunky", "Starting in depth scan...")
 
         ports = ','.join(str(x) for x in getopenports())
         fullscan = run_simple_cmd("nmap -Pn -O -sV -sC -p%s -T5 --min-rate 2500 --max-retries 3 -oN %s/nmap-fullscan.nmap -oX %s/nmap-fullscan.xml %s" % (ports, output_dir, output_dir, target))
-        
+
         vprint(0, "drunky", "Starting services scan...\n\n-Full-scans and Quick-scans are done, thank you for using me!!\n-Hope you will get root.")
         while any( t.is_alive() for t in threads ):
             pass
