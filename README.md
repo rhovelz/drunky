@@ -24,9 +24,10 @@ Currently only initial and quick are available and only has nmap features since 
 
 - Flags:
 
-    -h, --help                  Show help
-    -t, --target IP             Target ip address
-    -o, --output DIR            Output directory, defaults to "drunky"
+    - -h, --help                  Show help
+    - -t, --target IP             Target ip address
+    - -o, --output DIR            Output directory, defaults to "drunky"
+
 
 # Disclaimer
 ***
