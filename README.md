@@ -3,7 +3,7 @@
 
 # What is Drunky ?
 ***
-Drunky is an automation tool to run nmap initial & quick scans as you can run it for many machines and leave it till it finishes, it designed to perform fast nmap scanning unlike usual speed.
+Drunky is an automation tool to run nmap initial & quick scans in the same time and able to run it for many machines and leave it till it finishes, it designed to perform fast nmap scanning unlike usual speed.
 Currently only initial and quick are available and only has nmap features since its on BETA.
 
 # Screenshot
