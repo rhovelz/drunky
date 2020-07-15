@@ -1,0 +1,23 @@
+# Nmap 7.80 scan initiated Wed Jul 15 17:01:14 2020 as: nmap -Pn -O -sV -sC -p22,80 -T5 --min-rate 2500 --max-retries 3 -oN drunky/nmap-fullscan.nmap -oX drunky/nmap-fullscan.xml 10.10.10.195
+Nmap scan report for 10.10.10.195 (10.10.10.195)
+Host is up (0.13s latency).
+
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 b4:7b:bd:c0:96:9a:c3:d0:77:80:c8:87:c6:2e:a2:2f (RSA)
+|   256 44:cb:fe:20:bb:8d:34:f2:61:28:9b:e8:c7:e9:7b:5e (ECDSA)
+|_  256 28:23:8c:e2:da:54:ed:cb:82:34:a1:e3:b2:2d:04:ed (ED25519)
+80/tcp open  http    nginx 1.14.0 (Ubuntu)
+|_http-server-header: nginx/1.14.0 (Ubuntu)
+|_http-title: Intense - WebApp
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: VoIP adapter|general purpose
+Running: Cisco embedded, Linux 2.6.X
+OS CPE: cpe:/h:cisco:unified_call_manager cpe:/o:linux:linux_kernel:2.6
+OS details: Cisco Unified Communications Manager VoIP adapter, Linux 2.6.18 - 2.6.22, Linux 2.6.26 (PCLinuxOS)
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jul 15 17:01:30 2020 -- 1 IP address (1 host up) scanned in 16.63 seconds

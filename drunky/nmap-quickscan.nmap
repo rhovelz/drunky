@@ -1,0 +1,10 @@
+# Nmap 7.80 scan initiated Wed Jul 15 17:00:46 2020 as: nmap -Pn -sS -p- -T5 --min-rate 2500 --max-retries 3 -oN drunky/nmap-quickscan.nmap -oX drunky/nmap-quickscan.xml 10.10.10.195
+Warning: 10.10.10.195 giving up on port because retransmission cap hit (3).
+Nmap scan report for 10.10.10.195 (10.10.10.195)
+Host is up (0.12s latency).
+Not shown: 65533 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+80/tcp open  http
+
+# Nmap done at Wed Jul 15 17:01:13 2020 -- 1 IP address (1 host up) scanned in 27.86 seconds

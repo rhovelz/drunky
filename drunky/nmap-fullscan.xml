@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Wed Jul 15 17:01:14 2020 as: nmap -Pn -O -sV -sC -p22,80 -T5 -&#45;min-rate 2500 -&#45;max-retries 3 -oN drunky/nmap-fullscan.nmap -oX drunky/nmap-fullscan.xml 10.10.10.195 -->
+<nmaprun scanner="nmap" args="nmap -Pn -O -sV -sC -p22,80 -T5 -&#45;min-rate 2500 -&#45;max-retries 3 -oN drunky/nmap-fullscan.nmap -oX drunky/nmap-fullscan.xml 10.10.10.195" start="1594807274" startstr="Wed Jul 15 17:01:14 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="2" services="22,80"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1594807274" endtime="1594807290"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.195" addrtype="ipv4"/>
+<hostnames>
+<hostname name="10.10.10.195" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.6p1 Ubuntu 4ubuntu0.3" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.6p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 b4:7b:bd:c0:96:9a:c3:d0:77:80:c8:87:c6:2e:a2:2f (RSA)&#xa;  256 44:cb:fe:20:bb:8d:34:f2:61:28:9b:e8:c7:e9:7b:5e (ECDSA)&#xa;  256 28:23:8c:e2:da:54:ed:cb:82:34:a1:e3:b2:2d:04:ed (ED25519)"><table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDo7X60SypUzv25Vt7Iy/Wq4WdPkBzmUn+TqK7RNSxIlfDZTmwCNo0LO/YOLyltVUSprEvJfW1miuiwBTQnjWKnWL8f82Og+Wq0TkQ/7AZHJVpGmG19Rj/J12cHBWV0vQNvx+DvdoVDky7yvQklUA5yv7Gl7nFR1K3rWFqaFxlTXfZLerRAIcuQp1PxHbPL6k+W5cmS2hpWT/KONz5eL7mdbHARp1oEoKO73s67J7Stuq0259SxA+xbCouwjPQVQkPEanPz5fHDKqTKkSiYXywKQhHOTKPrJ0lEcMlaO3y4DIOPVF8FwDccrwRKjYJ0IaDQduEirhv3HfNv4CYic9Xz</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">b47bbdc0969ac3d07780c887c62ea22f</elem>
+<elem key="bits">2048</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKGMG1ljcV0joEI3ilCOe1HaCYGlk2lkf4MLzDLMH7wdEY6LC16UBVmug76hbDzyRcBThWk7+ziVJUc9DoME/PY=</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">44cbfe20bb8d34f261289be8c7e97b5e</elem>
+<elem key="bits">256</elem>
+</table>
+<table>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIPuRtbACSrUQCko9znobx9UhGA0t9yVg8tM4D1a5gj2E</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="fingerprint">28238ce2da54edcb8234a1e3b22d04ed</elem>
+<elem key="bits">256</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.14.0" extrainfo="Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.14.0</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-server-header" output="nginx/1.14.0 (Ubuntu)"><elem>nginx/1.14.0 (Ubuntu)</elem>
+</script><script id="http-title" output="Intense - WebApp"><elem key="title">Intense - WebApp</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="udp" portid="37139"/>
+<osmatch name="Cisco Unified Communications Manager VoIP adapter" accuracy="100" line="14715">
+<osclass type="VoIP adapter" vendor="Cisco" osfamily="embedded" accuracy="100"><cpe>cpe:/h:cisco:unified_call_manager</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.18 - 2.6.22" accuracy="100" line="49721">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.26 (PCLinuxOS)" accuracy="100" line="52869">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.6.26</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="2332766" lastboot="Thu Jun 18 17:02:04 2020"/>
+<distance value="2"/>
+<times srtt="128543" rttvar="27761" to="239587"/>
+</host>
+<runstats><finished time="1594807290" timestr="Wed Jul 15 17:01:30 2020" elapsed="16.63" summary="Nmap done at Wed Jul 15 17:01:30 2020; 1 IP address (1 host up) scanned in 16.63 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

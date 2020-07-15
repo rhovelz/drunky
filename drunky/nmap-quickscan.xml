@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Wed Jul 15 17:00:46 2020 as: nmap -Pn -sS -p- -T5 -&#45;min-rate 2500 -&#45;max-retries 3 -oN drunky/nmap-quickscan.nmap -oX drunky/nmap-quickscan.xml 10.10.10.195 -->
+<nmaprun scanner="nmap" args="nmap -Pn -sS -p- -T5 -&#45;min-rate 2500 -&#45;max-retries 3 -oN drunky/nmap-quickscan.nmap -oX drunky/nmap-quickscan.xml 10.10.10.195" start="1594807246" startstr="Wed Jul 15 17:00:46 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1594807246" endtime="1594807273"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.195" addrtype="ipv4"/>
+<hostnames>
+<hostname name="10.10.10.195" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="65533">
+<extrareasons reason="resets" count="65533"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" method="table" conf="3"/></port>
+</ports>
+<times srtt="117167" rttvar="1245" to="122147"/>
+</host>
+<runstats><finished time="1594807273" timestr="Wed Jul 15 17:01:13 2020" elapsed="27.86" summary="Nmap done at Wed Jul 15 17:01:13 2020; 1 IP address (1 host up) scanned in 27.86 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
