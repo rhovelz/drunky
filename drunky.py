@@ -17,7 +17,6 @@ target = 0
 depth = 1
 no_ping = False
 output_dir = 'drunky'
-wordlist = '/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt'
 extensions = ',php,html,txt,md,sh,py'
 
 helptext = ("""
