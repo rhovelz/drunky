@@ -156,12 +156,12 @@ def main():
         vprint(0, "drunky", "Starting initial scan...")
 
         create_result_dir()
-        quickscan = run_simple_cmd("nmap -Pn -sS -p- -T5 --min-rate 2500 --max-retries 3 -oN %s/nmap-quickscan.nmap -oX %s/nmap-quickscan.xml %s" % (output_dir, output_dir, target))
+        quickscan = run_simple_cmd("nmap -Pn -sS -p- -T4 --min-rate 2500 --max-retries 3 -oN %s/nmap-quickscan.nmap -oX %s/nmap-quickscan.xml %s" % (output_dir, output_dir, target))
 
         vprint(0, "drunky", "Starting in depth scan...")
 
         ports = ','.join(str(x) for x in getopenports())
-        fullscan = run_simple_cmd("nmap -Pn -O -sV -sC -p%s -T5 --min-rate 2500 --max-retries 3 -oN %s/nmap-fullscan.nmap -oX %s/nmap-fullscan.xml %s" % (ports, output_dir, output_dir, target))
+        fullscan = run_simple_cmd("nmap -Pn -O -sV -sC -p%s -T4 --min-rate 2500 --max-retries 3 -oN %s/nmap-fullscan.nmap -oX %s/nmap-fullscan.xml %s" % (ports, output_dir, output_dir, target))
 
         vprint(0, "drunky", "Starting services scan...\n\n-Full-scans and Quick-scans are done, thank you for using me!!\n-Hope you will get root.")
         while any( t.is_alive() for t in threads ):
