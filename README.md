@@ -17,7 +17,7 @@ Currently only initial and quick are available and only has nmap features since 
 
 # Getting Starated
 
-1. ```git clone https://github.com/corshinecorshine/drunky```
+1. ```git clone https://github.com/rhovelionz/drunky```
 2. ```cd drunky```
 3. ```chmod +x drunky.py```
 4. ```sudo python3 drunky.py -t IP-ADDRESS```
