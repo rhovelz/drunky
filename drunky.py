@@ -1,13 +1,6 @@
 #############################################
 #!/usr/bin/env python3                      #
-#  ___ ___  _ __ ___| |__ (_)_ __   ___     #
-# / __/ _ \| '__/ __| '_ \| | '_ \ / _ \    #
-#| (_| (_) | |  \__ \ | | | | | | |  __/    #
-# \___\___/|_|  |___/_| |_|_|_| |_|\___|    #
-#                                           #
-#Author: Radivan (Corshine)                 #
-#Github: github.com/rdvcorshine/            #
-#############################################
+
 
 import getopt, sys, os, time, _thread, threading, subprocess, datetime, base64
 import xml.etree.ElementTree as ET
